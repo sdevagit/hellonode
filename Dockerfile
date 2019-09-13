@@ -4,6 +4,12 @@ FROM node:7-onbuild
 # set maintainer
 LABEL maintainer deva
 
+COPY * /usr/src/app/
+
+RUN npm install
+
+CMD [ "npm", "start" ]
+
 # set a health check
 HEALTHCHECK --interval=5s \
             --timeout=5s \
