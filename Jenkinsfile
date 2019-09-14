@@ -23,10 +23,10 @@ node {
         }
     }
 
-    /* stage('Push image') {
-        docker.withRegistry('https://registry.hub.docker.com', 'docker-hub-credentials') {
+     stage('Push image') {
+        docker.withRegistry('https://153627826700.dkr.ecr.eu-west-1.amazonaws.com/firstjenkinssetup', 'ecr:eu-west-1:demo-ecr-credentials') {
             app.push("${env.BUILD_NUMBER}")
             app.push("latest")
         }
-    } */
+    } 
 }
